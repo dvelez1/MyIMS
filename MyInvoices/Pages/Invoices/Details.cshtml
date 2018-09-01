@@ -1,0 +1,55 @@
+﻿@page
+@model MyInvoices.Pages.Invoices.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>InvoiceDet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceDet.InvId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceDet.InvId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceDet.ProdId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceDet.ProdId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceDet.Units)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceDet.Units)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceDet.Sales)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceDet.Sales)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceDet.TotalSalesTax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceDet.TotalSalesTax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceDet.Gross)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceDet.Gross)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.InvoiceDet.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
